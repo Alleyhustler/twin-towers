@@ -1,0 +1,177 @@
+/* styles.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+  background-color: #8197c2;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .title {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header .subtitle {
+  flex: 2;
+  text-align: center;
+}
+
+header .social {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #61dafb;
+  margin: 0 25px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #21a1f1;
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: #0c84e3;
+}
+
+main {
+  margin-top: 140px; /* Make space for the fixed header */
+  height: 140vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#start-button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border: none;
+  background-color: #282c34;
+  color: white;
+  cursor: pointer;
+}
+
+#start-button:hover {
+  background-color: #61dafb;
+}
+
+.game-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.plane {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.tower {
+  position: absolute;
+  width: 80px;
+  height: 300px;
+  background-image: url('images/towers.jpg');
+  background-size: cover;
+  z-index: 3;
+  bottom: 0;
+}
+
+#tower1 {
+  right: -80px;
+}
+
+#tower2 {
+  right: -80px;
+  top: 0;
+}
+
+@keyframes moveTowers {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100vw;
+  }
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 24px;
+  z-index: 4;
+}

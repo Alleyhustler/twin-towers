@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plane Dodging Towers Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+          <h1>Dodge the twin towers</h1>
+        </div>
+        <div class="subtitle">
+          <h2>dodge the towers, dodge them for those who failed to.</h2>
+        </div>
+        <div class="social">
+          <nav>
+            <a href="https://x.com/dodge_twin_" target="_blank">Twitter</a>
+            <a href="https://t.me/+AcD7unAvv8hiZTg0" target="_blank">Telegram</a>
+          </nav>
+        </div>
+    </header>
+  <main>
+    <div id="game-container" class="game-container hidden">
+      <img src="images/background.jpg" class="background" alt="Background">
+      <img src="images/plane.jpeg" class="plane" alt="Plane" id="plane">
+      <div class="tower" id="tower1"></div>
+      <div class="tower" id="tower2"></div>
+      <div class="score" id="score">Score: 0</div>
+    </div>
+    <div id="start-screen" class="start-screen">
+      <button id="start-button">Start the game, use the arrows to move</button>
+    </div>
+  </main>
+  <script src="game.js"></script>
+  <audio id="collisionSound" src="sounds/collision.mp3"></audio>
+  <audio id="scoreSound" src="sounds/score.mp3"></audio>
+</body>
+</html>
